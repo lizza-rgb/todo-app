@@ -1,9 +1,9 @@
 import TaskItem from './TaskItem';
 
-function TaskList({ tasks, onToggleTask, onDeleteTask }) {
+function TaskList({ tasks, onDeleteTask }) {
   return (
     <div className="task-list">
-      <h2> Мои задачи</h2>
+      <h2>Мои задачи</h2>
       {tasks.length === 0 ? (
         <p className="empty-message">✨ Задач пока нет. Добавьте первую!</p>
       ) : (
@@ -12,7 +12,6 @@ function TaskList({ tasks, onToggleTask, onDeleteTask }) {
             <TaskItem
               key={task.id}
               task={task}
-              onToggle={onToggleTask}
               onDelete={onDeleteTask}
             />
           ))}

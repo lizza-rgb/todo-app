@@ -1,11 +1,6 @@
-function TaskItem({ task, onToggle, onDelete }) {
+function TaskItem({ task, onDelete }) {
   return (
-    <li className={`task-item ${task.completed ? 'completed' : ''}`}>
-      <input
-        type="checkbox"
-        checked={task.completed}
-        onChange={() => onToggle(task.id)}
-      />
+    <li className="task-item">
       <span>{task.title}</span>
       <button onClick={() => onDelete(task.id)} className="delete-button">
         Удалить
